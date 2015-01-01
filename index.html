@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Web based EEG data browser</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="lib/sweet-alert.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="lib/sweet-alert.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/svg.css">
+
+        <script src="mne.min.js"></script>
+    </head>
+    <body>
+
+        <div id="authentication">
+            <form onSubmit="return authenticate(this);" >
+              <div class="form-group">
+                <label for="id">Login:</label>
+                <input name="id" type="text" class="form-control" placeholder="Login">
+              </div>
+              <div class="form-group">
+                <label for="pass">Password:</label>
+                <input name="pass" type="password" class="form-control" id="pass" placeholder="Password">
+              </div>
+              <input type="submit" value="Login" class="btn btn-default">
+            </form>
+        </div>
+
+        <div id="timeFrameButtons">
+            <div class="btn-group" role="group" aria-label="...">
+                <button id="button5s" type="button" class="btn btn-default">5s</button>
+                <button id="button10s" type="button" class="btn btn-default">10s</button>
+                <button id="button15s" type="button" class="btn btn-default">15s</button>
+            </div>
+        </div>
+
+        <input id="fileSelector" type="file" style="display: none;">
+        <div id="dropZoneText" onclick="javascript:document.getElementById('fileSelector').click();">
+            <text style="font-size:30px">
+                <b><i>Drop your EEG file here
+                <br/>or click me to select your file</i></b>
+            </text>
+            <text>
+                <br/><i>(Formats currently supported: EDF and BDF)</i>
+            </text>
+        </div>
+        <div id="graph"></div>
+        <div id = "interaction">
+            <div id="sumPlot"></div>
+            <div id="sliderDiv"></div>
+        </div>
+        <text id="plotInfo"></text>
+    </body>
+</html>

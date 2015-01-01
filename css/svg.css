@@ -1,0 +1,10 @@
+path {
+    stroke-width: 1;
+    fill: none;
+    pointer-events: all;
+}
+
+text {
+    pointer-events:all;
+    color: black;
+}

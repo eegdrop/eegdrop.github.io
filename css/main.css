@@ -1,0 +1,104 @@
+#dropZoneText {
+    position: fixed;
+    text-align: center;
+    top: 40%;
+    width: 100%;
+    z-index: 1;
+    display: none;
+}
+
+#graph {
+    width: 99%;
+    height: 85%;
+    position: absolute;
+    pointer-events: none;
+}
+
+#plotInfo {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 0.5%;
+    pointer-events: none;
+}
+
+#timeFrameButtons {
+    display: none;
+    text-align: center;
+}
+
+#interaction {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 5em;
+}
+
+#sliderDiv {
+    pointer-events: none;
+    position: absolute;
+}
+
+#sumPlot {
+    pointer-events: none;
+    position: absolute;
+    margin-top: -1em;
+}
+
+#authentication {
+    position: absolute;
+    display: block;
+    text-align: center;
+    top: 40%;
+    margin-left: 40%;
+    z-index: 1;
+    background: linear-gradient(steelblue, white);
+    border-radius: 1em;
+    padding: 1em;
+}
+
+#authentication .btn {
+    background: #5699ee;
+    background: linear-gradient(to top, steelblue, white);
+    font-weight: bold;
+}
+
+#dropZoneText, #graph text {
+    cursor: pointer;
+}
+
+.axis {
+    font: 10px sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.axis .domain {
+    fill: none;
+    stroke: #000;
+    stroke-opacity: .3;
+    stroke-width: 10px;
+    stroke-linecap: round;
+}
+
+.axis .halo {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 8px;
+    stroke-linecap: round;
+}
+
+.slider .handle {
+    fill: lightgrey;
+    stroke: #000;
+    stroke-opacity: .5;
+    stroke-width: 1.25px;
+    cursor: move;
+    pointer-events: none;
+}
+
+.area {
+    fill: lightsteelblue;
+    stroke-width: 0;
+}
