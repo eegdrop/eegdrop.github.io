@@ -23,6 +23,16 @@
     pointer-events: none;
 }
 
+#toolTipText {
+    position: absolute;
+    bottom: 0;
+    text-align: right;
+    width: 100%;
+    padding-bottom: 0.5%;
+    pointer-events: none;
+    padding-right: 2%;
+}
+
 #timeFrameButtons {
     display: none;
     text-align: center;
