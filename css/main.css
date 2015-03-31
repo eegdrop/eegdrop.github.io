@@ -1,60 +1,3 @@
-#dropZoneText {
-    position: fixed;
-    text-align: center;
-    top: 40%;
-    width: 100%;
-    z-index: 1;
-    display: none;
-}
-
-#graph {
-    width: 99%;
-    height: 85%;
-    position: absolute;
-    pointer-events: none;
-}
-
-#plotInfo {
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-    padding-bottom: 0.5%;
-    pointer-events: none;
-}
-
-#toolTipText {
-    position: absolute;
-    bottom: 0;
-    text-align: right;
-    width: 100%;
-    padding-bottom: 0.5%;
-    pointer-events: none;
-    padding-right: 2%;
-}
-
-#timeFrameButtons {
-    display: none;
-    text-align: center;
-}
-
-#interaction {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 5em;
-}
-
-#sliderDiv {
-    pointer-events: none;
-    position: absolute;
-}
-
-#sumPlot {
-    pointer-events: none;
-    position: absolute;
-    margin-top: -1em;
-}
-
 #authentication {
     position: absolute;
     display: block;
@@ -73,8 +16,103 @@
     font-weight: bold;
 }
 
+#buttonDropdown {
+    position: relative;
+    width: 100%;
+    padding-bottom: 1%;
+    padding-top: 0.5%;
+}
+
+#dropZoneText {
+    position: fixed;
+    text-align: center;
+    top: 40%;
+    width: 100%;
+    z-index: 1;
+    display: none;
+}
+
 #dropZoneText, #graph text {
     cursor: pointer;
+}
+
+#durationControl {
+    display: none;
+    float: right;
+    padding-right: 1%;
+    position: relative;
+}
+
+#fileSelector {
+    display: none;
+}
+
+#graph {
+    width: 99%;
+    height: 85%;
+    position: relative;
+    pointer-events: none;
+}
+
+#interaction {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 5em;
+}
+
+#loadingIndicator {
+    display: none;
+    text-align: center;
+    top: 40%;
+    position: relative;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+#newFile {
+    float: left;
+    margin-left: 70px;
+    display: none;
+}
+
+#plotInfo {
+    position: absolute;
+    bottom: 0;
+    text-align: left;
+    padding-left: 70px;
+    width: 100%;
+    padding-bottom: 0.5%;
+    pointer-events: none;
+}
+
+#sliderDiv {
+    pointer-events: none;
+    position: absolute;
+}
+
+#sumPlot {
+    pointer-events: none;
+    position: absolute;
+    margin-top: -1em;
+}
+
+#toolTipText {
+    position: absolute;
+    bottom: 0;
+    text-align: left;
+    width: 100%;
+    padding-bottom: 0.5%;
+    pointer-events: none;
+    padding-left: 80%;
+}
+
+.area {
+    fill: lightsteelblue;
+    stroke-width: 0;
 }
 
 .axis {
@@ -99,6 +137,16 @@
     stroke-linecap: round;
 }
 
+.dropZoneTextMain {
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.italicText {
+    font-style: italic;
+}
+
 .slider .handle {
     fill: lightgrey;
     stroke: #000;
@@ -108,7 +156,6 @@
     pointer-events: none;
 }
 
-.area {
-    fill: lightsteelblue;
-    stroke-width: 0;
+a:hover {
+    cursor:pointer;
 }
