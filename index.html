@@ -25,7 +25,7 @@
         </script>
     </head>
     <body>
-        <div id = "main">
+        <div id="main">
             <div id="authentication">
                 <form onSubmit="return authenticate(this);" >
                   <div class="form-group">
@@ -49,13 +49,23 @@
                     <text>Load file</text>
                 </button>
 
-                <div id="durationControl">
-                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    <text>Duration</text>
-                    <span class="caret"></span>
-                    </button>
-                    <ul id="duration-menu" class="dropdown-menu">
-                    </ul>
+                <div id="floatButtonsRight">
+                    <div id="durationControl">
+                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <text>Page duration</text>
+                        <span class="caret"></span>
+                        </button>
+                        <ul id="duration-menu" class="dropdown-menu">
+                        </ul>
+                    </div>
+
+                    <div class="pop-div">
+                        <button id="helpWinButton" class="btn btn-default" type="button"
+                            onclick="$('#helpWindowPopup').click(); $('#blackOverlay').show();
+                            $(this).blur();">
+                            <text>Help</text>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -65,8 +75,17 @@
                 <br/><text class="italicText">(Formats currently supported: EDF and BDF)</text>
             </div>
 
-            <div id="loadingIndicator">
-                <img src="lib/loading.gif">
+            <div id="blackOverlay" class="overlay"></div>
+            <div id="helpWindowPopup" data-toggle="popover" data-html="true"></div>
+            <div id="chanSelect" class="pop-div">
+                <b><a id="chanSelectPopup" data-toggle="popover" data-html="true"></a></b>
+            </div>
+
+            <div id="progressBar" class="progress">
+                <div id="progressBarWidth" class="progress-bar progress-bar-striped active"
+                    role="progressbar">
+                    0%
+                </div>
             </div>
 
             <div id="graph"></div>

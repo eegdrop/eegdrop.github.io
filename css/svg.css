@@ -7,4 +7,5 @@ path {
 text {
     pointer-events:all;
     color: black;
+    font-family: Helvetica !important;
 }
