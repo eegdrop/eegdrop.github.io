@@ -12,22 +12,13 @@
         <link rel="stylesheet" type="text/css" href="css/svg.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
 
+        <script>var mne = {};</script>
         <script src="mne.min.js"></script>
-
-        <script>
-            var lang = window.navigator.userLanguage || window.navigator.language;
-            if (lang.toLowerCase().indexOf("fr") !== -1) {
-                var _ = mneFR;
-            }
-            else {
-                var _ = mneEN;
-            }
-        </script>
     </head>
     <body>
         <div id="main">
             <div id="authentication">
-                <form onSubmit="return authenticate(this);" >
+                <form onSubmit="return mneAuthenticate(this);" >
                   <div class="form-group">
                     <label for="id"><text>Login:</text></label>
                     <input name="id" type="text" class="form-control" placeholder="login">
@@ -96,8 +87,5 @@
             <text id="plotInfo"></text>
             <text id="toolTipText"></text>
         </div>
-        <script>
-            mneTranslate();
-        </script>
     </body>
 </html>
