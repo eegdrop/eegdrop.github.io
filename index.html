@@ -20,15 +20,16 @@
         <div id="main">
             <div id="authentication">
                 <form onSubmit="return mneAuthenticate(this);" >
-                  <div class="form-group">
-                    <label for="id"><text>Login:</text></label>
-                    <input name="id" type="text" class="form-control" placeholder="login">
-                  </div>
-                  <div class="form-group">
-                    <label for="pass"><text>Password</text>:</label>
-                    <input name="pass" type="password" class="form-control" id="pass" placeholder="password">
-                  </div>
-                  <input type="submit" value="Login" class="btn btn-default">
+                    <div class="form-group">
+                        <label for="id"><text>Login:</text></label>
+                        <input name="id" type="text" class="form-control" placeholder="login">
+                    </div>
+                    <div class="form-group">
+                        <label for="pass"><text>Password</text>:</label>
+                        <input name="pass" type="password" class="form-control" id="pass"
+                            placeholder="password">
+                    </div>
+                    <input type="submit" value="Login" class="btn btn-default">
                 </form>
             </div>
 
@@ -61,10 +62,24 @@
                 </div>
             </div>
 
-            <div id="dropZoneText" onclick="javascript:document.getElementById('fileSelector').click();">
-                <text class="dropZoneTextMain">Drop your EEG file here</text>
-                <br/><text class="dropZoneTextMain">or click here to select your file</text>
-                <br/><text class="italicText">(Formats currently supported: EDF and BDF)</text>
+            <div id="eegHeading">
+                <text id="headingTextEeg">EEG</text>
+                <text id="headingTextDrop">DROP</text>
+                <br><text id="eegSubHeading">EEG visualization made easy</text>
+            </div>
+
+            <div id="dropZoneText">
+                <!-- @Author: Icojam -->
+                <img id="dropIcon" src="lib/drop-icon.png"/>
+
+                <br><text class="dropZoneTextMain">Drop your EEG file here</text>
+                <br><text class="dropZoneTextMain">or</text>
+                <br><button id="dropZoneButton" class="btn btn-primary" type="button"
+                    onclick="javascript:document.getElementById('fileSelector').click();">
+                    <span class="glyphicon glyphicon-open-file" aria-hidden="true"></span>
+                    <text>Select a file to visualize</text>
+                </button>
+                <br><br><text class="italicText">(Formats currently supported: EDF and BDF)</text>
             </div>
 
             <div id="blackOverlay" class="overlay"></div>
@@ -88,5 +103,22 @@
             <text id="plotInfo"></text>
             <text id="toolTipText"></text>
         </div>
+        <div id="license">
+            <text>Powered by</text>
+            <a href="http://martinos.org/mne/" target="_blank">MNE</a>
+            &copy Copyright 2015
+            <a href="license.html" target="_blank"><text>License</text></a>
+            &#8226 <a href="mailto:contact@eegdrop.com" target="_top">Contact</a>
+        </div>
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-62433706-1', 'auto');
+          ga('send', 'pageview');
+        </script>
     </body>
 </html>
