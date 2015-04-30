@@ -283,6 +283,7 @@
 .popover {
   max-width: 100% !important;
   white-space: nowrap !important;
+  overflow: auto;
 }
 
 .popover.bottom>.arrow {
