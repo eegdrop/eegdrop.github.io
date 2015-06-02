@@ -23,6 +23,10 @@
     padding-top: 0.5%;
 }
 
+#chanSelect {
+    text-align: center;
+}
+
 #chanSelect label {
     color: steelblue;
     font-weight: bold;
@@ -31,11 +35,15 @@
 }
 
 #chanSelectPopup {
-    position: absolute;
-    margin-left: 50%;
+    position: relative;
+    margin-left: 1%;
     margin-top: 2%;
     z-index: 2000;
     color: white;
+}
+
+#chanSelectButton {
+    display: none;
 }
 
 #dropIcon {
@@ -66,6 +74,7 @@
     display: none;
     float: left;
     position: relative;
+    margin-right: 4%;
 }
 
 #eegHeading {
@@ -83,14 +92,53 @@
     margin-left: 15%;
 }
 
+#fileName {
+    position: relative;
+    float: right;
+    width: 35%;
+}
+
+#fileName .popover {
+    overflow: hidden !important;
+    width: auto !important;
+    font-size: 100% !important;
+}
+
+#fileNamePopover {
+    width: 65%;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-decoration: none;
+    color: inherit;
+}
+
 #fileSelector {
     display: none;
 }
 
+#footerInfo {
+    width: 100%;
+    bottom: 0;
+    padding-bottom: 0.5%;
+    pointer-events: none;
+    position: absolute;
+}
+
+#floatButtonsLeft {
+    float: left;
+    position: relative;
+    width: 50%;
+}
+
 #floatButtonsRight {
     float: right;
-    position: relative;
-    width: 17em;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-right: 2%;
 }
 
 #graph {
@@ -121,8 +169,7 @@
 }
 
 #helpWinButton {
-    margin-right: 5%;
-    float: right;
+    margin-left: 1rem;
     position: relative;
     display: none;
 }
@@ -165,17 +212,8 @@
 #newFile {
     float: left;
     margin-left: 70px;
+    margin-right: 2%;
     display: none;
-}
-
-#plotInfo {
-    position: absolute;
-    bottom: 0;
-    text-align: left;
-    padding-left: 70px;
-    width: 100%;
-    padding-bottom: 0.5%;
-    pointer-events: none;
 }
 
 #progressBar {
@@ -203,14 +241,23 @@
     margin-top: -1em;
 }
 
+#toolTipPopover {
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+
 #toolTipText {
-    position: absolute;
-    bottom: 0;
-    text-align: left;
-    width: 100%;
-    padding-bottom: 0.5%;
-    pointer-events: none;
-    padding-left: 80%;
+    position: relative;
+    margin-left: 5%;
+    width: 60%;
+    float: left;
+}
+
+#toolTipText .popover {
+    overflow: hidden !important;
+    width: auto !important;
+    font-size: 100% !important;
 }
 
 .area {

@@ -36,11 +36,18 @@
             <input id="fileSelector" type="file" accept=".edf,.bdf,.rec">
 
             <div id="buttonDropdown">
-                <button id="newFile" class="btn btn-default" type="button"
-                    onclick="javascript:document.getElementById('fileSelector').click();
-                        $('#newFile').blur();">
-                    <text>Load file</text>
-                </button>
+                <div id="floatButtonsLeft">
+                    <button id="newFile" class="btn btn-default" type="button"
+                        onclick="javascript:document.getElementById('fileSelector').click();
+                            $('#newFile').blur();">
+                        <text>Load file</text>
+                    </button>
+
+                    <button id="chanSelectButton" class="btn btn-default" type="button"
+                        onclick="$('#chanSelectPopup').click(); $('#blackOverlay').show(); $('#chanSelectButton').blur(); mne.initChanSelectAll()">
+                        <text>Select channels</text>
+                    </button>
+                </div>
 
                 <div id="floatButtonsRight">
                     <div id="durationControl">
@@ -100,8 +107,10 @@
                 <div id="sumPlot"></div>
                 <div id="sliderDiv"></div>
             </div>
-            <text id="plotInfo"></text>
-            <text id="toolTipText"></text>
+            <div id="footerInfo">
+                <text id="toolTipText"></text>
+                <text id="fileName"></text>
+            </div>
         </div>
         <div id="license">
             <text>Powered by</text>
