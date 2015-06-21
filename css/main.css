@@ -23,27 +23,22 @@
     padding-top: 0.5%;
 }
 
-#chanSelect {
+#chanSelectAll {
     text-align: center;
-}
-
-#chanSelect label {
-    color: steelblue;
-    font-weight: bold;
-    margin-top: 1%;
-    margin-right: 1em;
-}
-
-#chanSelectPopup {
-    position: relative;
-    margin-left: 1%;
-    margin-top: 2%;
-    z-index: 2000;
-    color: white;
 }
 
 #chanSelectButton {
     display: none;
+}
+
+#chanSelectOk {
+    text-align: center;
+}
+
+#chanSelectPopup {
+    width: 100%;
+    top: 5%;
+    position: absolute;
 }
 
 #dropIcon {
@@ -291,10 +286,6 @@
     font-weight: bold;
 }
 
-.chanSelCenter {
-    text-align:center;
-}
-
 .dropZoneTextMain {
     font-size: 30px;
     font-weight: bold;
@@ -329,16 +320,13 @@
 
 .popover {
   max-width: 100% !important;
+  max-height: 600px;
   white-space: nowrap !important;
   overflow: auto;
 }
 
 .popover.bottom>.arrow {
     display: none;
-}
-
-.popover table{
-    width: 80%;
 }
 
 .rightCell{

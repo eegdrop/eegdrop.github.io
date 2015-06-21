@@ -43,10 +43,12 @@
                         <text>Load file</text>
                     </button>
 
-                    <button id="chanSelectButton" class="btn btn-default" type="button"
-                        onclick="$('#chanSelectPopup').click(); $('#blackOverlay').show(); $('#chanSelectButton').blur(); mne.initChanSelectAll()">
-                        <text>Select channels</text>
-                    </button>
+                    <div class="pop-div">
+                        <button id="chanSelectButton" class="btn btn-default" type="button"
+                            onclick="$('#chanSelectPopup').click(); $('#blackOverlay').show(); $('#chanSelectButton').blur(); mne.initChanSelectAll()">
+                            <text>Select channels</text>
+                        </button>
+                    </div>
                 </div>
 
                 <div id="floatButtonsRight">
@@ -91,9 +93,7 @@
 
             <div id="blackOverlay" class="overlay"></div>
             <div id="helpWindowPopup" data-toggle="popover" data-html="true"></div>
-            <div id="chanSelect" class="pop-div">
-                <b><a id="chanSelectPopup" data-toggle="popover" data-html="true"></a></b>
-            </div>
+            <div id="chanSelectPopup" data-toggle="popover" data-html="true"></div>
 
             <div id="progressBar" class="progress">
                 <div id="progressBarWidth" class="progress-bar progress-bar-striped active"
