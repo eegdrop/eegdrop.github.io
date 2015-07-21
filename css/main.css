@@ -1,3 +1,8 @@
+#amplitudeGain {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 #authentication {
     position: absolute;
     display: block;
@@ -145,6 +150,8 @@
 
 #graph text {
     cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 #headingTextEeg {
@@ -202,6 +209,13 @@
     height: 99%;
     width: 100%;
     position: fixed;
+}
+
+#metadataPopup {
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    width: 100%;
 }
 
 #newFile {
@@ -304,6 +318,11 @@
 
 .italicText {
     font-style: italic;
+}
+
+.metadataTable {
+    border-spacing: 1em 0;
+    border-collapse: separate;
 }
 
 .overlay {
