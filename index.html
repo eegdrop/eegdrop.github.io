@@ -1,134 +1,16 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Web based EEG data browser</title>
-        <script src="lib/d3.v3.min.js" charset="utf-8"></script>
-        <script src="lib/jquery-1.10.2.min.js"></script>
-        <script src="lib/sweet-alert.min.js"></script>
-        <script src="lib/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="lib/sweet-alert.css">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-        <link rel="stylesheet" type="text/css" href="css/svg.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-
-        <script>if (typeof mne === "undefined") {var mne = {};}</script>
-        <script src="mne.min.js"></script>
-
-    </head>
-    <body>
-        <div id="main">
-            <div id="authentication">
-                <form onSubmit="return mneAuthenticate(this);" >
-                    <div class="form-group">
-                        <label for="id"><text>Login:</text></label>
-                        <input name="id" type="text" class="form-control" placeholder="login">
-                    </div>
-                    <div class="form-group">
-                        <label for="pass"><text>Password</text>:</label>
-                        <input name="pass" type="password" class="form-control" id="pass"
-                            placeholder="password">
-                    </div>
-                    <input type="submit" value="Login" class="btn btn-default">
-                </form>
-            </div>
-
-            <input id="fileSelector" type="file" accept=".edf,.bdf,.rec">
-
-            <div id="buttonDropdown">
-                <div id="floatButtonsLeft">
-                    <button id="newFile" class="btn btn-default" type="button"
-                        onclick="javascript:document.getElementById('fileSelector').click();
-                            $('#newFile').blur();">
-                        <text>Load file</text>
-                    </button>
-
-                    <div class="pop-div">
-                        <button id="chanSelectButton" class="btn btn-default" type="button"
-                            onclick="$('#chanSelectPopup').click(); $('#blackOverlay').show(); $('#chanSelectButton').blur(); mne.initChanSelectAll()">
-                            <text>Select channels</text>
-                        </button>
-                    </div>
-                </div>
-
-                <div id="floatButtonsRight">
-                    <div id="durationControl">
-                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                        <text>Page duration</text>
-                        <span class="caret"></span>
-                        </button>
-                        <ul id="duration-menu" class="dropdown-menu">
-                        </ul>
-                    </div>
-
-                    <div class="pop-div">
-                        <button id="helpWinButton" class="btn btn-default" type="button"
-                            onclick="$('#helpWindowPopup').click(); $('#blackOverlay').show();
-                            $(this).blur();">
-                            <text>Help</text>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div id="eegHeading">
-                <text id="headingTextEeg">EEG</text>
-                <text id="headingTextDrop">DROP</text>
-                <br><text id="eegSubHeading">EEG visualization made easy</text>
-            </div>
-
-            <div id="dropZoneText">
-                <!-- @Author: Icojam -->
-                <img id="dropIcon" src="lib/drop-icon.png"/>
-
-                <br><text class="dropZoneTextMain">Drop your EEG file here</text>
-                <br><text class="dropZoneTextMain">or</text>
-                <br><button id="dropZoneButton" class="btn btn-primary" type="button"
-                    onclick="javascript:document.getElementById('fileSelector').click();">
-                    <span class="glyphicon glyphicon-open-file" aria-hidden="true"></span>
-                    <text>Select a file to visualize</text>
-                </button>
-                <br><br><text class="italicText">(Formats currently supported: EDF and BDF)</text>
-            </div>
-
-            <div id="blackOverlay" class="overlay"></div>
-            <div id="helpWindowPopup" data-toggle="popover" data-html="true"></div>
-            <div id="chanSelectPopup" data-toggle="popover" data-html="true"></div>
-            <div id="metadataPopup"></div>
-
-            <div id="progressBar" class="progress">
-                <div id="progressBarWidth" class="progress-bar progress-bar-striped active"
-                    role="progressbar">
-                    0%
-                </div>
-            </div>
-
-            <div id="graph"></div>
-            <div id="interaction">
-                <div id="sumPlot"></div>
-                <div id="sliderDiv"></div>
-            </div>
-            <div id="footerInfo">
-                <text id="toolTipText"></text>
-                <text id="fileName"></text>
-            </div>
-        </div>
-        <div id="license">
-            <text>Powered by</text>
-            <a href="http://martinos.org/mne/" target="_blank">MNE</a>
-            &copy Copyright 2015
-            <a href="license.html" target="_blank"><text>License</text></a>
-            &#8226 <a href="mailto:contact@eegdrop.com" target="_top">Contact</a>
-        </div>
-
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-62433706-1', 'auto');
-          ga('send', 'pageview');
-        </script>
-    </body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EEGDrop — Private EEG Browser</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <script type="module" crossorigin src="/assets/index-BTJgzq9J.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BdhgSB4l.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
